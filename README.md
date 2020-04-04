@@ -1,1 +1,49 @@
 # AlphabetSoupChallenge
+
+AlphabetSoup provides funding to non-profit organizations. In the past, they have contributed funds to 34,299 organizations, representing about $95B. For each donation, they track the success rate and other statistics for each organization. Of the 34,299 donations, the Trustees have chosen wisely 18,261 times in which the recipients have achieved success. However, in 16,038 cases -- representing $60.5B in donations -- they have not met their success criteria. Thus their Accuracy Rate on Successful donations is 53.2%. With such a vast sum of money at stake, even a small improvement in accuracy rate ensure the donations do as much good as possible.  
+
+The AlphabetSoup Director would like to see if the application of Machine Learning or Deep Learning can find patterns in the data to help them improve their 53.2% Accuracy Rate on choosing the correct recipients. AlphabetSoup has provided a data file for the past recipients and noted if they achieved success, along with other parameters which they felt might be useful as a first pass analysis. 
+
+## Resources 
+* charity_data.csv file
+* Python ML and Neuro Network environment
+* Specifically, Libraries TensorFlow and Scikit-Learn, Pandas
+
+## Approach
+The problem is a classic "Binary Classification" problem, in which Applicant Non-Profits need to separated into Successful and Non-Successful groups represented by the parameter "IS_SUCCESSFUL=1 or 0." 
+
+* The charity_data.csv file was read into a Pandas Dataframe. 
+* Preprocessing of the data was performed to analyze its structure, data-types, and category of data to see what might be useful
+* Columns of no consequence - like EIN number and NAME of company were eliminated from the dataset. 
+* Other columns data was transformed into numerical data suitable to ML and Neuro Networks. 
+* The data was scaled 
+* The data was split into Training and Test datasets. 
+* As a benchmark for the Deep Learning Network, a RandomForest ML was run to access baseline accuracy. 
+* The Loss and Accuracy of the Deel Learning Network model was computed and the model parameters adjusted to try and improve or optimize the accuracy.
+
+## Results
+
+DataFrame Shape: 34,299 Rows X 117 Columns
+
+* Benchmark RandomForest Model achieved an accuracy of 0.699 or 69.9%. 
+* This represents quite a significant improvement in AlphabetSoup's current approval process of 53.2% - or a 16.7% improvement.
+* This improvement represents an additional 5700 organizations -- or $15.7B - being placed correctly with organization destined for success. 
+* 
+## Deep Learning Network Baseline Results
+* Starting with a Deep Learning Network consisting of:
+* Input Nodes = Len(X_train_scaled) = 114
+* Hidden Layer1 = 24 nodes
+* Hidden Layer2 = 12 nodes
+* Output Layer = 1 Node
+* Activation = relu on Layer1 and Layer2 with Output set for sigmoid
+* loss = binary_crossentropy
+* optimizer = adam
+* epochs = 50 
+
+Achieved Loss = 0.5611  Accuracy = .7308.  
+This improvement in accuracy over the RandomForest ML represents another 1028 Successful organizational donations. 
+
+## Optimizing the Results
+Various parameters and techniques were tried to improve the overall results: Setting up a duplicate Deep Learning Model code section, parameters were randomly adjusted and results recorded in the code comments and are repeated here for understanding. 
+
+* 
