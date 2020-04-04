@@ -46,4 +46,12 @@ This improvement in accuracy over the RandomForest ML represents another 1028 Su
 ## Optimizing the Results
 Various parameters and techniques were tried to improve the overall results: Setting up a duplicate Deep Learning Model code section, parameters were randomly adjusted and results recorded in the code comments and are repeated here for understanding. 
 
-* 
+* Check out your input dataset. - eliminated the Status and Special_Consideration columns which were binary in nature and very imbalanced 99.9% of data in a single state out of two states. Slight improvement in Loss from 0.5611 to 0.5340 and Accuracy 0.7308 to 0.7401. 
+
+* Add more neurons to a hidden layer - doubled Layer 1 from 24 to 48 and Layer 2 from 12 - 24. Results got slightly better by a few hundreds lower on loss and a few tenths of a percent on Accuracy.  
+* Add additional hidden layers.
+
+* Use a different activation function for the hidden layers - tried Tanh replacing Relu and tried using Relu in place of Sigmoid. No significant improvements in loss or output accuracy.
+
+* Add additional epochs to the training regimen - increased from 50 to 300. Results got worse by a few tenths of a percent. 
+
