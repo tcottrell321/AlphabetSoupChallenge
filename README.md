@@ -1,4 +1,4 @@
-# AlphabetSoupChallenge
+# Using Machine Learning To Direct Donations
 
 AlphabetSoup provides funding to non-profit organizations. In the past, they have contributed funds to 34,299 organizations, representing about $95B. For each donation, they track the success rate and other statistics for each organization. Of the 34,299 donations, the Trustees have chosen wisely 18,261 times in which the recipients have achieved success. However, in 16,038 cases -- representing $60.5B in donations -- they have not met their success criteria. Thus their Accuracy Rate on Successful donations is 53.2%. With such a vast sum of money at stake, even a small improvement in accuracy rate ensure the donations do as much good as possible.  
 
